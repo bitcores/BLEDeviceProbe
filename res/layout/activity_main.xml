@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/pairList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/pairlistbutton" />
+
+
+    <Button
+        android:id="@+id/disconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/disconnectbutton" />
+
+    <TextView
+        android:id="@+id/connectedDeviceHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/pairList"
+        android:layout_marginTop="10dp"
+        android:text="@string/connecteddevicehead" />
+
+    <TextView
+        android:id="@+id/connectedDeviceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/connectedDeviceHead"
+        android:layout_alignBottom="@+id/connectedDeviceHead"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/connectedDeviceHead" />
+	
+    <TableLayout 
+        android:id="@+id/scrolltable"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/connectedDeviceHead"
+		android:layout_marginTop="15dp" >
+		
+        <TableRow 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+		        android:id="@+id/serviceheader"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:textStyle="bold"
+		        android:text="@string/servicehead" />
+            
+            <TextView
+		        android:id="@+id/characteristicheader"
+		        android:layout_width="0dp"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:textStyle="bold"
+		        android:text="@string/characteristichead" />
+            
+        </TableRow>
+    
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            
+	       	<ListView 
+	       	    android:id="@+id/serviceListView"
+	       	    android:layout_width="0dp"
+	        	android:layout_height="fill_parent"
+	        	android:layout_weight="1">
+	       	    
+	       	</ListView>
+	       
+	
+   			<ListView 
+   			    android:id="@+id/characteristicListView"
+   			    android:layout_width="0dp"
+        		android:layout_height="fill_parent"
+      			android:layout_weight="1" >
+   			    
+   			</ListView>	
+
+    	</TableRow>
+    </TableLayout>
+
+
+</RelativeLayout>

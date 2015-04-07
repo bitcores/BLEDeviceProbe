@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BLE Device Probe</string>
+    <string name="pairlistbutton">Connect to Device</string>
+    <string name="disconnectbutton">Disconnect</string>
+    <string name="connecteddevicehead">Device:</string>
+    <string name="connecteddevicedefault">Disconnected</string>
+    <string name="servicehead">Services</string>
+    <string name="characteristichead">Characteristics</string>
+
+</resources>
